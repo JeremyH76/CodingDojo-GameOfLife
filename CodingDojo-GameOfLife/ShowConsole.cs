@@ -10,16 +10,18 @@ namespace CodingDojo_GameOfLife
     {
         public static void Show(bool[,] grid)
         {
-            Console.Write("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            string toShow = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+            //Console.Write("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
             for (int i = 0; i < grid.GetLength(0); i++)
             {
                 for (int j = 0; j < grid.GetLength(1); j++)
                 {
-                    if (grid[i, j]) { Console.Write('X'); }
-                    else { Console.Write(' '); }
+                    if (grid[i, j]) { toShow += 'X'; }
+                    else { toShow += ' '; }
                 }
-                Console.Write('\n');
+                toShow += '\n';
             }
+            Console.WriteLine(toShow);
         }
     }
 }
